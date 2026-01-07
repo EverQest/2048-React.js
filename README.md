@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# 🎮 2048 React.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge)
 
-## Available Scripts
+A modern, high-performance implementation of the classic **2048** puzzle game, built using **React**. This project showcases clean state management logic, efficient grid manipulation, and smooth CSS-based animations.
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Classic Gameplay:** Merge tiles with the same numbers to reach the ultimate 2048 tile.
+- **Smooth Animations:** Fluid transitions for tile movement and merging using CSS3 transitions and keyframes.
+- **Responsive Design:** Fully playable on both desktop and mobile browsers.
+- **Real-time Scoring:** Instant score updates as you play.
+- **Win/Loss Logic:** Automated detection of the "Game Over" state when no moves are left or the "Win" state when 2048 is reached.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## 🛠 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Library:** React.js (Functional Components & Hooks)
+- **State Management:** React `useState`, `useEffect`, and `useMemo` for optimized calculations.
+- **Styling:** CSS3 (Flexbox, Grid, and standard CSS Modules)
+- **Build Tool:** Vite / Create React App
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+src/
+├── components/        # UI Components (Board, Tile, Cell, ScoreBox)
+├── hooks/             # Custom hooks for game logic and event listeners
+├── utils/             # Helper functions (grid generation, move logic, collision detection)
+├── styles/            # CSS files for layout and animations
+├── App.js             # Main application entry point
+└── index.js           # Rendering logic
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## 🕹 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Node.js** (v14.0 or higher recommended)
+- **npm** or **yarn**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/EverQest/2048-React.js.git
+    ```
 
-## Learn More
+2.  **Navigate to the project folder:**
+    ```bash
+    cd 2048-React.js
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4.  **Start the development server:**
+    ```bash
+    npm start
+    ```
 
-### Code Splitting
+5.  Open [http://localhost:3000](http://localhost:3000) in your browser to see the game.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🎮 How to Play
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Use the **Arrow Keys** on your keyboard to move the tiles:
+- `Up Arrow`: Move tiles upward.
+- `Down Arrow`: Move tiles downward.
+- `Left Arrow`: Move tiles to the left.
+- `Right Arrow`: Move tiles to the right.
 
-### Making a Progressive Web App
+When two tiles with the same number touch, they **merge into one**!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🧠 Technical Highlights
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Matrix Logic:** The game board is represented as a 2D array, with logic handling shifts and merges for all four directions.
+- **Event Handling:** Global keyboard listeners are managed via `useEffect` to ensure clean mounting/unmounting.
+- **Performance:** Optimized rendering to ensure only moving tiles are updated, maintaining a smooth 60fps feel.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📝 Roadmap
 
-### `yarn build` fails to minify
+- [ ] **Local Storage:** Save high scores and current game state.
+- [ ] **Touch Gestures:** Add swipe support for mobile users.
+- [ ] **Undo Feature:** Allow players to revert the last move.
+- [ ] **Custom Themes:** Dark mode and high-contrast color palettes.
+- [ ] **Difficulty Settings:** Different grid sizes (3x3, 5x5, 6x6).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/EverQest/2048-React.js/issues).
+
+---
+
+## 👤 Author
+
+**EverQest**
+*   GitHub: [@EverQest](https://github.com/EverQest)
+
+---
+
+### Analysis Summary for the Owner:
+*   **Logic:** The game logic is cleanly separated from the UI components.
+*   **Code Quality:** Great use of React Hooks for managing game state and side effects.
+*   **UX:** The CSS animations provide a polished feel similar to the original 2048 game.
